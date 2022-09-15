@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  
+    --var--grey : #666666;
+    --var--whitish : #aaaaaa;
+    --var--green:  #83D78B;
+    --var--black : #000000;
+    --var-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --var-ffPrimary : 'Poppins', sans-serif;
+    --var-ffSecondary:  'Radley', serif;
+    --var-fwRegular :400px;
+    --var-fwMedium: 500px;
+    --var-fwSemiBold: 600px;
+    --var-fwBold : 700px;
+}
+body{
+    font-family: var(--var-ffPrimary);
+}
+nav{
+    font-family: var(--var-ffSecondary);
+    font-size: 24px;
+    padding: 1rem 2rem;
+    display: flex;
+    box-shadow:var(--var-shadow);
+}
+.leftNav{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    text-transform: uppercase;
+}
+.leftNav .logo{
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+}
+.rightNav{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.rightNav ul{
+    
+    display: flex;
+    
+}
+.rightNav ul li{
+    padding: 1.25rem 4rem;
+    margin: .25rem;
+    list-style-type: none;
+    
+   
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+.cover{
+    margin-top: 1rem;
+    padding: 1rem 15rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+     /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);  */
+}
+
+.ellipse img{
+    /* background-color: red; */
+    /* background-size:cover ; */
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    padding: .75rem;
+    border: 0.25rem solid rgba(0, 0, 0, 0.25) ;
+    box-shadow: var(--var-shadow);
+}
+.coverDesc{
+    margin-left: 2rem;
+    max-width: 30rem;
+}
+.coverDesc .subtitle{
+    color: var(--var--whitish);
+}
+.coverDesc h2{
+    font-family: var(--var-ffPrimary);
+    font-size: 48px;
+    font-weight: var(--var-fwRegular);
+}
+button{
+    width: max-content;
+    padding: .5rem 1.5rem;
+    border-radius: 30px;
+    border: 2px solid var(--var--whitish);
+    box-shadow: var(--var-shadow);
+    margin: 1.25rem .75rem;
+    font-size: 16px;
+}
+button:hover{
+    transition:all 0.3s ease-in-out;
+    background-color: var(--var--whitish);
+}
+.firstButton{
+    border: 2px solid var(--var--green);
+    
+}
+.firstButton:hover
+{
+    background-color: var(--var--green);
+    
+}
+.firstButton:hover a{
+    color:white;
+}
+footer{
+    display: flex;
+    padding: 1rem 2rem;
+  
+}
+footer a{
+    font-size: 16px;
+    padding-right: 2rem;
+ 
+    font-family: var(--var-ffSecondary);
+    color: var(--var--whitish);
+}
+ a:hover{
+    color: var(--var--green);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+.rightFooter{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    font-family: var(--var-ffSecondary);
+    color: var(--var--whitish);
+}
+/* About Styling */
+
+.about{
+    display: flex;
+    padding: 2rem;
+    height: 65vh;
+}
+.aboutTitle{
+    padding: 2rem;
+    box-shadow: var(--var-shadow);
+}
+.education,.experience{
+    display: flex;
+    flex-direction: column;
+}
+/* .blockTitle h3::before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: greenyellow;
+    height: 2px;
+    bottom: 0;
+}
+.blockTitle h3:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: red;
+    height: 2px;
+    bottom: 0;
+} */
+
+
+.exp{
+    margin-top: 3rem;
+    padding: .2rem .6rem;
+}
+.expDuration{
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 15rem;
+    border: 2px solid var(--var--green);
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.exp span{
+    color: var(--var--whitish);
+}
+.expDetail{
+   padding-top: .5rem;
+   padding-left: 2rem;
+    width: 80%;
+}
+.exp  h6 {
+    text-transform: uppercase;
+    font-size:  1.23rem;
+    font-weight: var(--var-fwMedium)
+  }
+  .statCon{
+    padding: 2rem;
+  }
+  .statCon h5{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-size: 1.23rem;
+      font-weight: var(--var-fwBold);
+  }
+  .progressBars
+  {
+    padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 2rem;
+  }
+.progressCon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress{
+    position: relative;
+    width: 100%;
+    margin-left: 1rem;
+    /* background-color: var(--var--whitish); */
+    border:2px solid rgb(220, 211, 211);
+    border-radius: 1.25rem;
+    height: .75rem;
+}
+.progressTitle{
+    font-size: 1.234rem;
+    font-weight: var(--var-fwMedium);
+    font-family: var(--var-ffSecondary);
+}
+.progress span{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-left: .15rem;
+    border-radius: 2rem;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: var(--var--green);
+}
+.progress .html{
+    width: 90%;
+}
+.progress .css{
+    width: 80%;
+}
+.progress .javaScript{
+    width: 70%;
+}
+.progress .cpp{
+    width: 60%;
+}
+.progress .photoshop{
+    width: 85%;
+}
+.progress .nodejs{
+    width: 55%;
+}
+
+
+/* portfolio styling */
+.portfolios{
+    padding: 2rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+}
+.portfolioItem
+{
+    position: relative;
+
+}
+.portfolioItem img{
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.portfolioItem .hover-items{
+    width: 100%;
+    height: 100%;
+    background-color: var(--var--green);
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s ease;
+
+}
+.hover-items h3
+{
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+.hover-items .icons
+{
+    display: flex;
+
+}
+.portfolios .portfolioItem .hover-items .icons .icon
+{
+    display: flex;
+    width: 55px;
+    height: 55px;
+
+}
+.icon i 
+{
+    color: white;
+    font-size: 2rem;
+}
+.portfolioItem .icon i:hover
+{
+    color: black;
+    transition: all .5s ease;
+}
+.portfolioItem:hover .hover-items
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* contact */
+.contactSubtitle{
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--var--green);
+}
+.contact{
+    padding:5rem 2rem 5rem 7rem;
+    display: flex;
+    height: 65vh;
+}
+
+.contact .contact-details p
+{
+    font-family:var(--var-ffPrimary) ;
+    color: var(--var--whitish);
+    margin-bottom: 1rem;
+    font-size: 1.23rem;
+}
+.contact .contact-details span
+{
+    color: black;
+}
+.contact-form{
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 3rem;
+    width: 100%;
+}
+.contact-form .inputLeft{
+
+    display: flex;
+    flex-direction: column;
+
+}
+.inputLeft input
+{
+    margin-bottom: 1rem;
+    height: 2rem;
+    border-radius:15px ;
+    border-color: var(--var--whitish);
+    padding: 1rem;
+    font-family: var(--var-ffPrimary);
+    color: var(--var--whitish);
+}
+
+.inputRight textarea
+{
+  border-radius: 15px;
+  padding: 1rem;
+  font-family:var(--var-ffPrimary);
+    color: var(--var--whitish);
+    width: 100%;
+    border-color: var(--var--whitish);
+}
+.contactPar .submit{
+    
+    text-align: center;
+    border-color: var(--var--green);
+}
+.contactPar button:hover
+{
+    background-color: var(--var--green);
+    color: white;
+}
